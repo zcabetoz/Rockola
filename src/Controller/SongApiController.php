@@ -16,10 +16,15 @@ class SongApiController extends AbstractController
     public function getSongAction(int $id, LoggerInterface $logger): Response
     {
         //TODO query the database
+//        $song = [
+//            'id' => $id,
+//            'name' => 'Zombie',
+//            'url' => ' https://www.youtube.com/watch?v=6Ejga4kJUts'
+//        ];
         $song = [
             'id' => $id,
-            'name' => 'Zombie',
-            'url' => ' https://www.youtube.com/watch?v=6Ejga4kJUts'
+            'name' => 'Waterfalls',
+            'url' => 'https://symfonycasts.s3.amazonaws.com/sample.mp3',
         ];
         $logger->info('Returning API response for song {song}',[
             'song' => $id,
